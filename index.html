@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M32CP0RMMB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,10 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Robodex.in – Smart Automation & Robotics</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
@@ -27,6 +24,15 @@
         extend: {
           transitionTimingFunction: {
             'apple': 'cubic-bezier(0.4, 0, 0.2, 1)'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-out forwards'
           }
         }
       }
@@ -43,14 +49,12 @@
 
 <body class="bg-white text-gray-900 dark:bg-black dark:text-gray-100 transition-all duration-500 ease-apple">
 
-<!-- DARK MODE TOGGLE -->
 <button id="themeToggle"
   class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-black text-white dark:bg-white dark:text-black
          flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-105">
   🌙
 </button>
 
-<!-- NAVBAR -->
 <header class="fixed top-0 w-full z-40 backdrop-blur-xl bg-white/55 dark:bg-black/45 border-b border-gray-200 dark:border-gray-800">
   <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
     <h1 class="text-xl font-semibold tracking-tight">Robodex<span class="text-gray-400">.in</span></h1>
@@ -69,7 +73,6 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section id="home" class="pt-44 pb-36 text-center">
   <div class="max-w-7xl mx-auto px-8">
     <h2 class="text-6xl md:text-7xl font-bold mb-8">
@@ -86,7 +89,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="py-32 bg-gray-50 dark:bg-neutral-900">
   <div class="max-w-5xl mx-auto px-8">
     <h3 class="text-4xl font-semibold mb-10">About Robodex.in</h3>
@@ -100,7 +102,6 @@
   </div>
 </section>
 
-<!-- PRODUCTS -->
 <section id="products" class="py-32">
   <div class="max-w-7xl mx-auto px-8">
     <h3 class="text-4xl font-semibold mb-16">Our Products</h3>
@@ -111,7 +112,7 @@
         <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
           Smart automation for existing electrical systems.
         </p>
-        <a href="#swych" class="font-semibold hover:underline">View Details →</a>
+        <a href="#swych" onclick="toggleSwychGallery()" class="font-semibold hover:underline">View Details →</a>
       </div>
 
       <div class="rounded-3xl border p-10 hover:shadow-xl transition">
@@ -125,10 +126,16 @@
   </div>
 </section>
 
-<!-- SWYCH DETAILS -->
 <section id="swych" class="py-32 bg-gray-50 dark:bg-neutral-900">
   <div class="max-w-5xl mx-auto px-8 space-y-10">
     <h3 class="text-4xl font-semibold">SWYCH-L-101</h3>
+    
+    <div id="swych-gallery" class="hidden grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
+        <img src="ESP32 Home automation box 2.jpeg" alt="SWYCH Device View 1" class="rounded-2xl shadow-md hover:scale-[1.03] transition-transform duration-300">
+        <img src="ESP32 Home automation box 4.jpeg" alt="SWYCH Device View 2" class="rounded-2xl shadow-md hover:scale-[1.03] transition-transform duration-300">
+        <img src="ESP32 Home automation box 3.jpeg" alt="SWYCH Connector View" class="rounded-2xl shadow-md hover:scale-[1.03] transition-transform duration-300">
+    </div>
+
     <ul class="list-disc list-inside text-lg space-y-2">
       <li>IoT-based automation</li>
       <li>Control your home using Google Home & Alexa</li>
@@ -140,7 +147,6 @@
   </div>
 </section>
 
-<!-- LOCK DETAILS -->
 <section id="lock" class="py-32">
   <div class="max-w-5xl mx-auto px-8 space-y-10">
     <h3 class="text-4xl font-semibold">Smart Keypad Door Lock</h3>
@@ -155,7 +161,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="py-32 bg-gray-50 dark:bg-neutral-900 text-center">
   <h3 class="text-4xl font-semibold mb-8">Contact Us</h3>
 
@@ -163,7 +168,6 @@
   <p class="text-lg">📞 +91 7619602423</p>
   <p class="text-lg mb-8">📞 +91 9353181817</p>
 
-  <!-- SOCIAL MEDIA -->
   <p class="text-md mb-4 text-gray-600 dark:text-gray-400">
     Follow us on Instagram by clicking the logo below
   </p>
@@ -207,6 +211,12 @@
     html.classList.toggle('dark');
     toggle.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
   };
+
+  // Function to show the images when details are clicked
+  function toggleSwychGallery() {
+    const gallery = document.getElementById('swych-gallery');
+    gallery.classList.remove('hidden');
+  }
 </script>
 
 </body>
