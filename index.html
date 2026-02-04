@@ -58,16 +58,12 @@
 <header class="fixed top-0 w-full z-40 backdrop-blur-xl bg-white/55 dark:bg-black/45 border-b border-gray-200 dark:border-gray-800">
   <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
     <h1 class="text-xl font-semibold tracking-tight">Robodex<span class="text-gray-400">.in</span></h1>
-
     <nav class="hidden md:flex items-center space-x-10 text-sm font-medium">
       <a href="#home" class="hover:text-black dark:hover:text-white">Home</a>
       <a href="#about" class="hover:text-black dark:hover:text-white">About Us</a>
       <a href="#products" class="hover:text-black dark:hover:text-white">Our Products</a>
     </nav>
-
-    <a href="#contact"
-       class="rounded-full bg-black text-white dark:bg-white dark:text-black
-              px-6 py-2 text-sm font-semibold hover:opacity-80">
+    <a href="#contact" class="rounded-full bg-black text-white dark:bg-white dark:text-black px-6 py-2 text-sm font-semibold hover:opacity-80">
       CONTACT US
     </a>
   </div>
@@ -75,15 +71,11 @@
 
 <section id="home" class="pt-44 pb-36 text-center">
   <div class="max-w-7xl mx-auto px-8">
-    <h2 class="text-6xl md:text-7xl font-bold mb-8">
-      Smart Automation<br class="hidden md:block"> Built for Reality.
-    </h2>
+    <h2 class="text-6xl md:text-7xl font-bold mb-8">Smart Automation<br class="hidden md:block"> Built for Reality.</h2>
     <p class="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-400 mb-12">
       At Robodex.in, we engineer intelligent automation and robotic systems that elevate conventional infrastructure into secure, scalable, and connected ecosystems.
     </p>
-    <a href="#products"
-       class="inline-block rounded-full bg-black text-white dark:bg-white dark:text-black
-              px-10 py-4 font-semibold hover:scale-[1.02]">
+    <a href="#products" class="inline-block rounded-full bg-black text-white dark:bg-white dark:text-black px-10 py-4 font-semibold hover:scale-[1.02]">
       Explore Our Products
     </a>
   </div>
@@ -93,11 +85,7 @@
   <div class="max-w-5xl mx-auto px-8">
     <h3 class="text-4xl font-semibold mb-10">About Robodex.in</h3>
     <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-      Robodex.in is a student-founded technology startup specializing in automation and robotics for real-world use.
-      Founded by <strong>Ishaan.G</strong> and <strong>Dhanush.K.R</strong>, we design systems that are practical,
-      scalable, and engineered for Indian infrastructure.
-      <br><br>
-      Our focus is on reliability, security, and seamless integration — without complex rewiring or costly replacements.
+      Robodex.in is a student-founded technology startup specializing in automation and robotics. Founded by <strong>Ishaan.G</strong> and <strong>Dhanush.K.R</strong>, we design systems engineered for Indian infrastructure.
     </p>
   </div>
 </section>
@@ -105,23 +93,15 @@
 <section id="products" class="py-32">
   <div class="max-w-7xl mx-auto px-8">
     <h3 class="text-4xl font-semibold mb-16">Our Products</h3>
-
     <div class="grid md:grid-cols-2 gap-12">
       <div class="rounded-3xl border p-10 hover:shadow-xl transition">
         <h4 class="text-2xl font-semibold mb-4">SWYCH-L-101</h4>
-        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-          Smart automation for existing electrical systems.
-        </p>
-        <button onclick="toggleSwychGallery()" class="font-semibold text-black dark:text-white hover:underline">
-          View Details ↓
-        </button>
+        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">Smart automation for existing electrical systems.</p>
+        <button onclick="toggleSwychGallery()" class="font-semibold text-black dark:text-white hover:underline">View Details ↓</button>
       </div>
-
       <div class="rounded-3xl border p-10 hover:shadow-xl transition">
         <h4 class="text-2xl font-semibold mb-4">Smart Keypad Door Lock</h4>
-        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-          Secure, keyless access with smart control.
-        </p>
+        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">Secure, keyless access with smart control.</p>
         <a href="#lock" class="font-semibold hover:underline">View Details →</a>
       </div>
     </div>
@@ -131,13 +111,17 @@
 <section id="swych" class="py-32 bg-gray-50 dark:bg-neutral-900">
   <div class="max-w-5xl mx-auto px-8 space-y-10">
     <h3 class="text-4xl font-semibold">SWYCH-L-101 Details</h3>
-    
     <div id="swych-gallery" class="hidden grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
-        <img src="1.jpg" alt="View 1" class="rounded-2xl shadow-lg w-full h-64 object-cover">
-        <img src="2.jpg" alt="View 2" class="rounded-2xl shadow-lg w-full h-64 object-cover">
-        <img src="3.jpg" alt="View 3" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+        <div class="overflow-hidden rounded-2xl shadow-lg bg-white dark:bg-neutral-800">
+            <img src="1.jpg" alt="View 1" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-2xl shadow-lg bg-white dark:bg-neutral-800">
+            <img src="2.jpg" alt="View 2" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-2xl shadow-lg bg-white dark:bg-neutral-800">
+            <img src="3.jpg" alt="View 3" class="w-full h-64 object-cover">
+        </div>
     </div>
-
     <ul class="list-disc list-inside text-lg space-y-2">
       <li>IoT-based automation</li>
       <li>Control your home using Google Home & Alexa</li>
@@ -157,8 +141,6 @@
       <li>Remote lock/unlock</li>
       <li>Access logs & alerts</li>
       <li>Lock & Unlock using Passcodes via APP</li>
-      <li>Sleek Design</li>
-      <li>Budget Friendly</li>
     </ul>
   </div>
 </section>
@@ -167,17 +149,6 @@
   <h3 class="text-4xl font-semibold mb-8">Contact Us</h3>
   <p class="text-lg mb-2">📧 robodex.in@gmail.com</p>
   <p class="text-lg">📞 +91 7619602423</p>
-  <p class="text-lg mb-8">📞 +91 9353181817</p>
-
-  <div class="flex justify-center">
-    <a href="https://www.instagram.com/robodex.in" target="_blank" class="group">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-8 h-8 text-gray-700 dark:text-gray-300 transition-transform duration-300 group-hover:scale-110 group-hover:text-black dark:group-hover:text-white">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-      </svg>
-    </a>
-  </div>
 </section>
 
 <footer class="border-t py-6 text-center text-sm text-gray-500">
