@@ -32,7 +32,7 @@
             }
           },
           animation: {
-            'fade-in': 'fadeIn 0.5s ease-out forwards'
+            'fade-in': 'fadeIn 0.6s ease-out forwards'
           }
         }
       }
@@ -112,7 +112,9 @@
         <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
           Smart automation for existing electrical systems.
         </p>
-        <a href="#swych" onclick="toggleSwychGallery()" class="font-semibold hover:underline">View Details →</a>
+        <button onclick="toggleSwychGallery()" class="font-semibold text-black dark:text-white hover:underline">
+          View Details ↓
+        </button>
       </div>
 
       <div class="rounded-3xl border p-10 hover:shadow-xl transition">
@@ -128,12 +130,12 @@
 
 <section id="swych" class="py-32 bg-gray-50 dark:bg-neutral-900">
   <div class="max-w-5xl mx-auto px-8 space-y-10">
-    <h3 class="text-4xl font-semibold">SWYCH-L-101</h3>
+    <h3 class="text-4xl font-semibold">SWYCH-L-101 Details</h3>
     
     <div id="swych-gallery" class="hidden grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
-        <img src="ESP32 Home automation box 2.jpeg" alt="SWYCH Device View 1" class="rounded-2xl shadow-md hover:scale-[1.03] transition-transform duration-300">
-        <img src="ESP32 Home automation box 4.jpeg" alt="SWYCH Device View 2" class="rounded-2xl shadow-md hover:scale-[1.03] transition-transform duration-300">
-        <img src="ESP32 Home automation box 3.jpeg" alt="SWYCH Connector View" class="rounded-2xl shadow-md hover:scale-[1.03] transition-transform duration-300">
+        <img src="1.jpg" alt="View 1" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+        <img src="2.jpg" alt="View 2" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+        <img src="3.jpg" alt="View 3" class="rounded-2xl shadow-lg w-full h-64 object-cover">
     </div>
 
     <ul class="list-disc list-inside text-lg space-y-2">
@@ -163,34 +165,13 @@
 
 <section id="contact" class="py-32 bg-gray-50 dark:bg-neutral-900 text-center">
   <h3 class="text-4xl font-semibold mb-8">Contact Us</h3>
-
   <p class="text-lg mb-2">📧 robodex.in@gmail.com</p>
   <p class="text-lg">📞 +91 7619602423</p>
   <p class="text-lg mb-8">📞 +91 9353181817</p>
 
-  <p class="text-md mb-4 text-gray-600 dark:text-gray-400">
-    Follow us on Instagram by clicking the logo below
-  </p>
-
   <div class="flex justify-center">
-    <a
-      href="https://www.instagram.com/robodex.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Robodex Instagram"
-      class="group"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8"
-        class="w-8 h-8 text-gray-700 dark:text-gray-300
-               transition-transform duration-300
-               group-hover:scale-110
-               group-hover:text-black dark:group-hover:text-white"
-      >
+    <a href="https://www.instagram.com/robodex.in" target="_blank" class="group">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-8 h-8 text-gray-700 dark:text-gray-300 transition-transform duration-300 group-hover:scale-110 group-hover:text-black dark:group-hover:text-white">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
         <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
@@ -206,16 +187,15 @@
 <script>
   const toggle = document.getElementById('themeToggle');
   const html = document.documentElement;
-
   toggle.onclick = () => {
     html.classList.toggle('dark');
     toggle.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
   };
 
-  // Function to show the images when details are clicked
   function toggleSwychGallery() {
     const gallery = document.getElementById('swych-gallery');
-    gallery.classList.remove('hidden');
+    gallery.classList.toggle('hidden');
+    document.getElementById('swych').scrollIntoView({ behavior: 'smooth' });
   }
 </script>
 
